@@ -1,3 +1,4 @@
+
 /* Reset some default styles */
 body, h1, h2, p, ul {
     margin: 0;
@@ -81,3 +82,26 @@ svg {
         padding: 20px;
     }
 }
+.blinking{
+  display: inline-block;
+  width: 2px;
+  height: 42px;
+  background-color: white;
+  margin-left:  8px;
+ 
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes blink {
+  0%{opacity: 1;}
+  40%{opacity: 1;}
+  60%{opacity: 0;}
+  100%{opacity: 0;}
+}
+.blinking{
+  animation: blink .6s linear infinite alternate;
+}
+
