@@ -10,25 +10,22 @@
  {text:"I am competitive",color:"yellow"},
  {text:"I am working towards my dreams!",color:"orange"}
  ];
-$( document ).ready(async function() {
-  carousel(txts, "#feature-text")
-});
+window.onload= carousel(txts,"#feature-text");
 
 
 
 
 
- async function typeSentence(sentence, eleRef, delay = 1){
+ async function typeSentence(sentence, eleRef, delay = 100){
 //  alert("arrived");
  const letters = sentence.split("");
  let i=0;
- //alert(letters.length);
-
+ //alert("getting ready");
  while(i<letters.length){
- alert("goooo");
+ //alert("goooo");
 // alert(i);)
  await waitforMs(delay);
- $(eleRef).append(letters[i]);
+ $(eleRef).innerHTML(letters[i]);
  i++;
  }
  return;
@@ -54,7 +51,7 @@ async function carousel(txts, eleRef) {
       await deleteSentence(eleRef);
       await waitForMs(500);
       i++
-      if(i >= txts.length) {i = 0;}
+      if(i >= carouselList.length) {i = 0;}
     }
 }
 
