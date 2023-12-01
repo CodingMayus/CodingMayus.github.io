@@ -1,23 +1,69 @@
-window.addEventListener('scroll', () => {
+/* window.addEventListener('scroll', () => {
   document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-}, false);
- var txts=["I am an International Baccalaureate Student", "I am to code","I am a Mathematician"," I am a runner","I am competitive"," I am working towards my dreams!"];
- 
- document.getElementById("clicky").addEventListener("Click", typeWriter);
-function typeWriter() {
-var speed = 100;
-var cnt =0;
-/* for(cnt =0;cnt<6;cnt++){ */
-//document.getElementById("attributes").innerHTML = "";
-var i =0;
-  if (i < txts[1].length) {
-    document.getElementById("attributes").innerHTML += txts[1].charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-/* if(i>=0){
-   document.getElementById("attributes").innerHTML -= txts[cnt].charAt(i);
- } */
-//}
+}, false); */
 
-} 
+ const  txts=
+ [{text:"I am an International Baccalaureate Student", color :"red"},
+ {text: "I am a coder",color: "green"},
+ {text:"I am a Mathematician",color: "blue"},
+ {text:"I am a runner",color:"purple"},
+ {text:"I am competitive",color:"yellow"},
+ {text:"I am working towards my dreams!",color:"orange"}
+ ];
+$( document ).ready(async function() {
+  carousel(txts, "#feature-text")
+});
+
+
+
+
+
+ async function typeSentence(sentence, eleRef, delay = 1){
+//  alert("arrived");
+ const letters = sentence.split("");
+ let i=0;
+ //alert(letters.length);
+
+ while(i<letters.length){
+ alert("goooo");
+// alert(i);)
+ await waitforMs(delay);
+ $(eleRef).append(letters[i]);
+ i++;
+ }
+ return;
+ }
+ 
+ async function deleteSentence(eleRef){
+ const sentence = $(eleRef).html();
+ //returns the html if used as an retrun statemnet like that, otherwise it can overwrite the innerHTMl of all the referrenced elelmetns
+ const letters = sentence.split("");
+ let i=0;
+ while(letters.length>0){
+ await waitForMs(100);
+ letters.pop();
+ $(eleRef).html(letters.join(""));
+ }
+ }
+async function carousel(txts, eleRef) {
+    var i = 0;
+    while(true) {
+      updateFontColor(eleRef, txts[i].color)
+      await typeSentence(txts[i].text, eleRef);
+      await waitForMs(1500);
+      await deleteSentence(eleRef);
+      await waitForMs(500);
+      i++
+      if(i >= txts.length) {i = 0;}
+    }
+}
+
+function updateFontColor(eleRef, color) {
+  $(eleRef).css('color', color);
+}
+ function waitForMs(ms){
+ return new Promise(resolve => setTimeout(resolve, ms ));
+
+ }
+
+ //the async and await pattern allows my code to execute line by line so that inside the while loop "wait forms" will execute for 0.1 second and then the character will be appended to HTML
