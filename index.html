@@ -11,13 +11,32 @@
     <title>Matthew Yu's Personal Website</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/88cee3d1f2.js" crossorigin="anonymous"></script>
+
 </head>
 
 
-<body>
+
 
     <!-- Header Section -->
-    <header>
+ 
+    <!-- Navigation Section -->
+    <div id = "navigation">
+   
+   
+    <nav>
+        <ul >
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href = "hobbies">Hobbies</a></li>
+             <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+ </nav>
+    </div>
+       <header>
+       <br>
+       <br>
     <p>
     Hello my name is
     </p>
@@ -25,25 +44,16 @@
 <div class = "container">
     <br>
 <span id = "sentence" class = "sentence"> </span>
-<span>I AM <span>
-
-
-<span id="feature-text"></span>
+<span id="feature-text">
+ 
+</span>
 <span class = "blinking"></span>
 
 
 
 
 </div>    </header>
-    <!-- Navigation Section -->
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#portfolio">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<body>
 
     <!-- Main Content Section -->
 
@@ -53,7 +63,9 @@
         <p>Welcome to my personal website! I am passionate about web development and constantly seeking new
             opportunities to learn and grow.</p>
         <!-- Add more content as needed -->
+        <img src = "/me.png">
     </section>
+    
 
     <!-- Resume Section -->
     <section id="resume">
@@ -63,25 +75,85 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio">
-        <h2>Projects</h2>
-        <p>Check out some of my projects and works.</p>
-       <a href="https://chromewebstore.google.com/detail/social-media-blocker/pdjipgdhjcjbhjbnkopidgknnahhgean"> <img id="extension"  src="extension.png" alt="ext"> </a> <img id = "checklist"src="OIP.jpg"alt = "checklist">  <img id = "dmojlogo"src="R.png"alt = "dmojlogo">
+    
+   <div id ="portfolio">
+    <h2 >My coding journey</h1>
 
-        <!-- Add more content as needed -->
+         <div class = "container">
+            <div class="projectlist">
+                    <div class="project">
+                        <img src="/extension.png">
+                        <div class="layer">
+                            <h3>MiliBLOCK</h3>
+                            <p>blahahbhhbbh</p>
+                            <a href="#"><i class="fa fa-regular fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="/OIP.jpg">
+                        <div class="layer">
+                            <h3>Checklist</h3>
+                            <p>blahahbhhbbh</p>
+                            <a href="#"><i class="fa fa-regular fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="/dmoj.png">
+                        <div class="layer">
+                            <h3>Competitive Coding</h3>
+                            <p>blahahbhhbbh</p>
+                            <a href="#"><i class="fa fa-regular fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    </div>
+<a href = "#" class = "btn">See more</a>
+
+            </div>
+
+         </div>
+
+   </div>
+
+
+   <section id = "hobbies">
+     
     </section>
-
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out! I'd love to connect with you.</p>
-        <!-- Add a contact form or additional contact information -->
-    </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; Matthew Yu</p>
-    </footer>
+    <div id ="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h2>Contact me</h2>
+                    <p><i class="fa fa-solid fa-paper-plane"></i>matthew_yu85@outlook.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>647-563-7588</p>
+                
+                    <div class="social-icons">
+                        <a href=""><i class=" fa fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa fa-brands fa-strava"></i></a>
+                        <a href=""><i class="fa fa-brands fa-discord"></i></a>
+                        <a href=""><i class="fa fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type = "text" name = "Name"placeholder="Your Name" required>
+                        <input type = "email" name = "email" placeholder= "Your Email" required>
+                        <textarea name = "Message" rows= "6" placeholder = "Your Message"></textarea>
+                        <button type = "submit" class = "btn btn2">Submit</button>
+                     </form>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="copyright" style="color:#fff">&copy; Matthew Yu  </div>
+
+    </div>
+   
 
 </body>
 
