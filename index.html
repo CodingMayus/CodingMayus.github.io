@@ -143,16 +143,7 @@
                         <input type = "email" name = "Email" placeholder= "Your Email" required>
                         <textarea name = "Message" rows= "6" placeholder = "Your Message"></textarea>
                         <button type = "submit" class = "btn btn2">Submit</button>
-                        <script>
-  const scriptURL = 'https://script.google.com/a/macros/gapps.yrdsb.ca/s/AKfycbyrzBxgfuhGYgfnU2H_pii0_HrUOPg_4Fi5nDuxLrKHy-2aqemntrytAXenFXqShCAx/exec';
-  const form = document.forms['submit-to-google-sheet']
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
+                       
                      </form>
 
                 </div>
@@ -165,5 +156,14 @@
    
 
 </body>
-
+ <script>
+  const scriptURL = 'https://script.google.com/a/macros/gapps.yrdsb.ca/s/AKfycbyrzBxgfuhGYgfnU2H_pii0_HrUOPg_4Fi5nDuxLrKHy-2aqemntrytAXenFXqShCAx/exec';
+  const form = document.forms['submit-to-google-sheet']
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </html>
