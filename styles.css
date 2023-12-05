@@ -123,10 +123,13 @@ svg {
     opacity:0%;
        }
     40%{
-    opacity:40%;
+    opacity:0%;
+    }
+    60%{
+    opacity:65%;
     }
     80%{
-    opacity:80%;
+    opacity:100%;
     }
     100%{
     opacity:100%;
