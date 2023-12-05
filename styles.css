@@ -107,7 +107,9 @@ svg {
         padding: 20px;
     }
 }
-
+#feature-text{
+    display:inline-block;
+}
 .blinking {
     display: inline-block;
     width: 2px;
